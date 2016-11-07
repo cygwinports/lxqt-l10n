@@ -1,0 +1,22 @@
+inherit qt5 cmake
+
+NAME="lxqt-l10n"
+VERSION=0.11.0
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="LXQt translations"
+DESCRIPTION="LXQt is the Qt port and the upcoming version of LXDE. It is the
+product of the merge between the LXDE-Qt and the Razor-qt projects: A
+lightweight, modular, blazing-fast and user-friendly desktop environment."
+HOMEPAGE="http://lxqt.org/"
+SRC_URI="http://downloads.lxqt.org/lxqt/${VERSION}/${NAME}-${VERSION}.tar.xz"
+
+ARCH=noarch
+
+CYGCMAKE_ARGS="
+	-DWITH_COMPTON_CONF=OFF
+	-DWITH_LXQT_ADMIN=OFF
+	-DWITH_LXQT_POLICYKIT=OFF
+	-DWITH_LXQT_POWERMANAGEMENT=OFF
+	-DWITH_LXQT_SUDO=OFF
+"
